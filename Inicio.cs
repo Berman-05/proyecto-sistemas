@@ -1,30 +1,38 @@
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.DataFormats;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace proyecto_sistemas
 {
-    public partial class Form1 : Form
+    public partial class Inicio : Form
     {
-        public Form1()
+        public Inicio()
         {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
             this.BackColor = Color.White;
             this.Padding = new Padding(0);
-            this.Load += Form1_Load;
-            this.Resize += Form1_Resize;
+            this.Load += Inicio_Load;
+            this.Resize += Inicio_Resize;
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void Inicio_Load(object sender, EventArgs e)
         {
             AplicarFormaRedondeada(30);
         }
 
-        private void Form1_Resize(object sender, EventArgs e)
+        private void Inicio_Resize(object sender, EventArgs e)
         {
-            AplicarFormaRedondeada(30); // Redibuja la forma en caso de cambio de tama�o
+            AplicarFormaRedondeada(30); // Redibuja la forma en caso de cambio de tamaño
         }
 
         private void AplicarFormaRedondeada(int radioBorde)
@@ -54,15 +62,32 @@ namespace proyecto_sistemas
             return path;
         }
 
-        private void botonRedondo1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
+        
 
-        private void button1_Click(object sender, EventArgs e)
+        private void botonRedondo1_Click(object sender, EventArgs e)
         {
-            Application.Exit();
-
+            string user = userBox.Text;
+            string password = passwordtxt.Text;
+            if (user == "Usuario1" && password == "123")
+            {
+                MessageBox.Show("Sesión iniciada");
+                Menu nuevoFormulario = new Menu();
+                nuevoFormulario.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Credenciales incorrectas");
+            }
         }
     }
 }
