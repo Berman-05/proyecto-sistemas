@@ -211,7 +211,7 @@ namespace proyecto_sistemas
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
             // Lógica de pintura del panel (si es necesario)
-        }
+        }//comentario
     }
 }
 
