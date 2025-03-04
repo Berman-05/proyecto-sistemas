@@ -288,6 +288,7 @@
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(779, 258);
             dataGridView1.TabIndex = 9;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // botonRedondo1
             // 
@@ -307,6 +308,7 @@
             botonRedondo1.Text = "Comprar";
             botonRedondo1.TextColor = Color.Black;
             botonRedondo1.UseVisualStyleBackColor = false;
+            botonRedondo1.Click += botonRedondo1_Click;
             // 
             // comboBox1
             // 

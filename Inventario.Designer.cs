@@ -111,7 +111,7 @@
             iconButton4.Text = "Ventas";
             iconButton4.TextImageRelation = TextImageRelation.ImageBeforeText;
             iconButton4.UseVisualStyleBackColor = true;
-            iconButton4.Click += iconButton4_Click;
+         
             // 
             // iconButton3
             // 
@@ -187,6 +187,7 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(834, 62);
             panel2.TabIndex = 2;
+            panel2.Paint += panel2_Paint;
             // 
             // label1
             // 
