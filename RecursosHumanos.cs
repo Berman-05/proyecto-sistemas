@@ -54,5 +54,25 @@ namespace proyecto_sistemas
             Ventas nuevoFormulario = new Ventas();
             nuevoFormulario.Show();
         }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Menu nuevoFormulario = new Menu();
+            nuevoFormulario.Show();
+        }
+
+        private void IBtnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+
+        }
+
+        private void iconButton5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Inicio nuevoFormulario = new Inicio();
+            nuevoFormulario.Show();
+        }
     }
 }

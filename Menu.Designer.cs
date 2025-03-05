@@ -46,10 +46,10 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.LogoMainPolloRey;
-            pictureBox1.Location = new Point(450, 49);
+            pictureBox1.Location = new Point(395, 114);
             pictureBox1.Margin = new Padding(2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(222, 212);
+            pictureBox1.Size = new Size(300, 303);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
@@ -87,7 +87,7 @@
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(4, 4, 4, 4);
+            panel1.Margin = new Padding(4);
             panel1.Name = "panel1";
             panel1.Size = new Size(1106, 42);
             panel1.TabIndex = 5;
@@ -117,7 +117,7 @@
             btnVentas.FlatStyle = FlatStyle.Flat;
             btnVentas.Font = new Font("Century Gothic", 14F, FontStyle.Bold);
             btnVentas.ForeColor = Color.Black;
-            btnVentas.Location = new Point(608, 481);
+            btnVentas.Location = new Point(594, 481);
             btnVentas.Margin = new Padding(2);
             btnVentas.Name = "btnVentas";
             btnVentas.Size = new Size(200, 200);
@@ -141,7 +141,7 @@
             btnInventario.FlatStyle = FlatStyle.Flat;
             btnInventario.Font = new Font("Century Gothic", 14F, FontStyle.Bold);
             btnInventario.ForeColor = Color.Black;
-            btnInventario.Location = new Point(54, 481);
+            btnInventario.Location = new Point(40, 481);
             btnInventario.Margin = new Padding(2);
             btnInventario.Name = "btnInventario";
             btnInventario.Size = new Size(201, 200);
@@ -165,7 +165,7 @@
             btnCompras.FlatStyle = FlatStyle.Flat;
             btnCompras.Font = new Font("Century Gothic", 14F, FontStyle.Bold);
             btnCompras.ForeColor = Color.Black;
-            btnCompras.Location = new Point(326, 481);
+            btnCompras.Location = new Point(312, 481);
             btnCompras.Margin = new Padding(2);
             btnCompras.Name = "btnCompras";
             btnCompras.Size = new Size(200, 200);
@@ -189,7 +189,7 @@
             btnRecursos.FlatStyle = FlatStyle.Flat;
             btnRecursos.Font = new Font("Century Gothic", 14F, FontStyle.Bold);
             btnRecursos.ForeColor = Color.Black;
-            btnRecursos.Location = new Point(872, 481);
+            btnRecursos.Location = new Point(858, 481);
             btnRecursos.Margin = new Padding(2);
             btnRecursos.Name = "btnRecursos";
             btnRecursos.Size = new Size(205, 200);

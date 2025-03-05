@@ -103,6 +103,7 @@
             iconButton5.Text = "Salir";
             iconButton5.TextImageRelation = TextImageRelation.ImageBeforeText;
             iconButton5.UseVisualStyleBackColor = true;
+            iconButton5.Click += iconButton5_Click;
             // 
             // iconButton4
             // 
@@ -121,6 +122,7 @@
             iconButton4.Text = "Ventas";
             iconButton4.TextImageRelation = TextImageRelation.ImageBeforeText;
             iconButton4.UseVisualStyleBackColor = true;
+            iconButton4.Click += iconButton4_Click;
             // 
             // iconButton3
             // 
@@ -223,6 +225,7 @@
             IBtnMin.Size = new Size(50, 62);
             IBtnMin.TabIndex = 5;
             IBtnMin.UseVisualStyleBackColor = false;
+            IBtnMin.Click += IBtnMin_Click;
             // 
             // IBtnExit
             // 
@@ -240,6 +243,7 @@
             IBtnExit.Size = new Size(56, 62);
             IBtnExit.TabIndex = 4;
             IBtnExit.UseVisualStyleBackColor = false;
+            IBtnExit.Click += IBtnExit_Click;
             // 
             // iconButton1
             // 
@@ -259,6 +263,7 @@
             iconButton1.Text = "Inicio ";
             iconButton1.TextImageRelation = TextImageRelation.ImageBeforeText;
             iconButton1.UseVisualStyleBackColor = true;
+            iconButton1.Click += iconButton1_Click;
             // 
             // panel5
             // 
@@ -278,6 +283,7 @@
             panel5.Name = "panel5";
             panel5.Size = new Size(834, 564);
             panel5.TabIndex = 3;
+            panel5.Paint += panel5_Paint;
             // 
             // dataGridView1
             // 
@@ -396,6 +402,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(2);
             Name = "Compras";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Compras";
             Load += Compras_Load;
             panel1.ResumeLayout(false);

@@ -93,6 +93,7 @@
             iconButton5.Text = "Salir";
             iconButton5.TextImageRelation = TextImageRelation.ImageBeforeText;
             iconButton5.UseVisualStyleBackColor = true;
+            iconButton5.Click += iconButton5_Click;
             // 
             // iconButton4
             // 
@@ -214,6 +215,7 @@
             IBtnMin.Size = new Size(50, 62);
             IBtnMin.TabIndex = 2;
             IBtnMin.UseVisualStyleBackColor = false;
+            IBtnMin.Click += IBtnMin_Click;
             // 
             // IBtnExit
             // 
@@ -231,6 +233,7 @@
             IBtnExit.Size = new Size(56, 62);
             IBtnExit.TabIndex = 1;
             IBtnExit.UseVisualStyleBackColor = false;
+            IBtnExit.Click += IBtnExit_Click;
             // 
             // iconButton1
             // 
@@ -250,6 +253,7 @@
             iconButton1.Text = "Inicio ";
             iconButton1.TextImageRelation = TextImageRelation.ImageBeforeText;
             iconButton1.UseVisualStyleBackColor = true;
+            iconButton1.Click += iconButton1_Click;
             // 
             // dataGridView1
             // 
@@ -297,6 +301,7 @@
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Inventario";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Inventario";
             Load += Inventario_Load;
             panel1.ResumeLayout(false);

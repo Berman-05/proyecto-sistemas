@@ -90,6 +90,7 @@
             iconButton5.Text = "Salir";
             iconButton5.TextImageRelation = TextImageRelation.ImageBeforeText;
             iconButton5.UseVisualStyleBackColor = true;
+            iconButton5.Click += iconButton5_Click;
             // 
             // iconButton4
             // 
@@ -229,6 +230,7 @@
             IBtnExit.Size = new Size(56, 62);
             IBtnExit.TabIndex = 1;
             IBtnExit.UseVisualStyleBackColor = false;
+            IBtnExit.Click += IBtnExit_Click;
             // 
             // iconButton1
             // 
@@ -248,6 +250,7 @@
             iconButton1.Text = "Inicio ";
             iconButton1.TextImageRelation = TextImageRelation.ImageBeforeText;
             iconButton1.UseVisualStyleBackColor = true;
+            iconButton1.Click += iconButton1_Click;
             // 
             // panel3
             // 
@@ -271,6 +274,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(2);
             Name = "RecursosHumanos";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "RecursosHumanos";
             panel1.ResumeLayout(false);
             panel5.ResumeLayout(false);
