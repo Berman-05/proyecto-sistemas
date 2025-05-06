@@ -71,7 +71,7 @@ namespace proyecto_sistemas
         {
             Application.Exit();
         }
-        
+
 
         private void botonRedondo1_Click(object sender, EventArgs e)
         {
@@ -88,6 +88,11 @@ namespace proyecto_sistemas
             {
                 MessageBox.Show("Credenciales incorrectas");
             }
+        }
+
+        private void userBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

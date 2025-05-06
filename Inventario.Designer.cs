@@ -44,6 +44,7 @@
             dataGridView1 = new DataGridView();
             txtBuscar = new TextBox();
             IBtnBuscarUsuario = new FontAwesome.Sharp.IconButton();
+            iconButton6 = new FontAwesome.Sharp.IconButton();
             panel1.SuspendLayout();
             panel5.SuspendLayout();
             panel4.SuspendLayout();
@@ -60,21 +61,21 @@
             panel1.Location = new Point(0, 0);
             panel1.Margin = new Padding(2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(220, 626);
+            panel1.Size = new Size(176, 501);
             panel1.TabIndex = 1;
             // 
             // panel5
             // 
             panel5.BackColor = Color.White;
+            panel5.Controls.Add(iconButton6);
             panel5.Controls.Add(iconButton5);
             panel5.Controls.Add(iconButton4);
             panel5.Controls.Add(iconButton3);
             panel5.Controls.Add(iconButton2);
             panel5.Dock = DockStyle.Fill;
-            panel5.Location = new Point(0, 156);
-            panel5.Margin = new Padding(4);
+            panel5.Location = new Point(0, 125);
             panel5.Name = "panel5";
-            panel5.Size = new Size(220, 470);
+            panel5.Size = new Size(176, 376);
             panel5.TabIndex = 1;
             // 
             // iconButton5
@@ -85,10 +86,9 @@
             iconButton5.IconColor = Color.Black;
             iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton5.IconSize = 30;
-            iconButton5.Location = new Point(0, 399);
-            iconButton5.Margin = new Padding(4);
+            iconButton5.Location = new Point(0, 319);
             iconButton5.Name = "iconButton5";
-            iconButton5.Size = new Size(220, 71);
+            iconButton5.Size = new Size(176, 57);
             iconButton5.TabIndex = 3;
             iconButton5.Text = "Salir";
             iconButton5.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -104,10 +104,9 @@
             iconButton4.IconColor = Color.Black;
             iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton4.IconSize = 30;
-            iconButton4.Location = new Point(0, 172);
-            iconButton4.Margin = new Padding(4);
+            iconButton4.Location = new Point(0, 138);
             iconButton4.Name = "iconButton4";
-            iconButton4.Size = new Size(220, 86);
+            iconButton4.Size = new Size(176, 69);
             iconButton4.TabIndex = 2;
             iconButton4.Text = "Ventas";
             iconButton4.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -123,10 +122,9 @@
             iconButton3.IconColor = Color.Black;
             iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton3.IconSize = 30;
-            iconButton3.Location = new Point(0, 86);
-            iconButton3.Margin = new Padding(4);
+            iconButton3.Location = new Point(0, 69);
             iconButton3.Name = "iconButton3";
-            iconButton3.Size = new Size(220, 86);
+            iconButton3.Size = new Size(176, 69);
             iconButton3.TabIndex = 1;
             iconButton3.Text = "Compras";
             iconButton3.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -144,9 +142,8 @@
             iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton2.IconSize = 30;
             iconButton2.Location = new Point(0, 0);
-            iconButton2.Margin = new Padding(4);
             iconButton2.Name = "iconButton2";
-            iconButton2.Size = new Size(220, 86);
+            iconButton2.Size = new Size(176, 69);
             iconButton2.TabIndex = 0;
             iconButton2.Text = "Recursos Humanos";
             iconButton2.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -159,18 +156,16 @@
             panel4.Controls.Add(pictureBox1);
             panel4.Dock = DockStyle.Top;
             panel4.Location = new Point(0, 0);
-            panel4.Margin = new Padding(4);
             panel4.Name = "panel4";
-            panel4.Size = new Size(220, 156);
+            panel4.Size = new Size(176, 125);
             panel4.TabIndex = 0;
             // 
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.LogoMainPolloRey;
-            pictureBox1.Location = new Point(4, 9);
-            pictureBox1.Margin = new Padding(4);
+            pictureBox1.Location = new Point(3, 7);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(210, 140);
+            pictureBox1.Size = new Size(168, 112);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
@@ -183,19 +178,20 @@
             panel2.Controls.Add(IBtnExit);
             panel2.Controls.Add(iconButton1);
             panel2.Dock = DockStyle.Top;
-            panel2.Location = new Point(220, 0);
+            panel2.Location = new Point(176, 0);
             panel2.Margin = new Padding(2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(834, 62);
+            panel2.Size = new Size(667, 50);
             panel2.TabIndex = 2;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Century Gothic", 26F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(267, 0);
+            label1.Location = new Point(214, 0);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(278, 62);
+            label1.Size = new Size(234, 51);
             label1.TabIndex = 3;
             label1.Text = "Inventario";
             // 
@@ -209,10 +205,10 @@
             IBtnMin.IconColor = Color.Black;
             IBtnMin.IconFont = FontAwesome.Sharp.IconFont.Auto;
             IBtnMin.IconSize = 35;
-            IBtnMin.Location = new Point(728, 0);
+            IBtnMin.Location = new Point(582, 0);
             IBtnMin.Margin = new Padding(0);
             IBtnMin.Name = "IBtnMin";
-            IBtnMin.Size = new Size(50, 62);
+            IBtnMin.Size = new Size(40, 50);
             IBtnMin.TabIndex = 2;
             IBtnMin.UseVisualStyleBackColor = false;
             IBtnMin.Click += IBtnMin_Click;
@@ -227,10 +223,10 @@
             IBtnExit.IconColor = Color.Black;
             IBtnExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
             IBtnExit.IconSize = 35;
-            IBtnExit.Location = new Point(778, 0);
+            IBtnExit.Location = new Point(622, 0);
             IBtnExit.Margin = new Padding(0);
             IBtnExit.Name = "IBtnExit";
-            IBtnExit.Size = new Size(56, 62);
+            IBtnExit.Size = new Size(45, 50);
             IBtnExit.TabIndex = 1;
             IBtnExit.UseVisualStyleBackColor = false;
             IBtnExit.Click += IBtnExit_Click;
@@ -248,7 +244,7 @@
             iconButton1.Location = new Point(0, 0);
             iconButton1.Margin = new Padding(2);
             iconButton1.Name = "iconButton1";
-            iconButton1.Size = new Size(102, 62);
+            iconButton1.Size = new Size(82, 50);
             iconButton1.TabIndex = 0;
             iconButton1.Text = "Inicio ";
             iconButton1.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -258,18 +254,20 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(242, 172);
+            dataGridView1.Location = new Point(194, 138);
+            dataGridView1.Margin = new Padding(2, 2, 2, 2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(793, 429);
+            dataGridView1.Size = new Size(634, 343);
             dataGridView1.TabIndex = 19;
             // 
             // txtBuscar
             // 
-            txtBuscar.Location = new Point(242, 107);
+            txtBuscar.Location = new Point(194, 86);
+            txtBuscar.Margin = new Padding(2, 2, 2, 2);
             txtBuscar.Name = "txtBuscar";
             txtBuscar.PlaceholderText = "Buscar...";
-            txtBuscar.Size = new Size(740, 31);
+            txtBuscar.Size = new Size(593, 27);
             txtBuscar.TabIndex = 18;
             // 
             // IBtnBuscarUsuario
@@ -282,24 +280,42 @@
             IBtnBuscarUsuario.IconColor = Color.Black;
             IBtnBuscarUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
             IBtnBuscarUsuario.IconSize = 30;
-            IBtnBuscarUsuario.Location = new Point(976, 109);
+            IBtnBuscarUsuario.Location = new Point(781, 87);
             IBtnBuscarUsuario.Margin = new Padding(0);
             IBtnBuscarUsuario.Name = "IBtnBuscarUsuario";
-            IBtnBuscarUsuario.Size = new Size(59, 29);
+            IBtnBuscarUsuario.Size = new Size(47, 23);
             IBtnBuscarUsuario.TabIndex = 20;
             IBtnBuscarUsuario.UseVisualStyleBackColor = false;
             // 
+            // iconButton6
+            // 
+            iconButton6.Cursor = Cursors.Hand;
+            iconButton6.Dock = DockStyle.Top;
+            iconButton6.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            iconButton6.IconChar = FontAwesome.Sharp.IconChar.PiggyBank;
+            iconButton6.IconColor = Color.Black;
+            iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconButton6.IconSize = 30;
+            iconButton6.Location = new Point(0, 207);
+            iconButton6.Name = "iconButton6";
+            iconButton6.Size = new Size(176, 69);
+            iconButton6.TabIndex = 5;
+            iconButton6.Text = "Finanzas";
+            iconButton6.TextImageRelation = TextImageRelation.ImageBeforeText;
+            iconButton6.UseVisualStyleBackColor = true;
+            // 
             // Inventario
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1054, 626);
+            ClientSize = new Size(843, 501);
             Controls.Add(IBtnBuscarUsuario);
             Controls.Add(dataGridView1);
             Controls.Add(txtBuscar);
             Controls.Add(panel2);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(2, 2, 2, 2);
             Name = "Inventario";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Inventario";
@@ -333,5 +349,6 @@
         private TextBox txtBuscar;
         private Label label1;
         private FontAwesome.Sharp.IconButton IBtnBuscarUsuario;
+        private FontAwesome.Sharp.IconButton iconButton6;
     }
 }

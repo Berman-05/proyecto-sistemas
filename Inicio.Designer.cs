@@ -47,9 +47,10 @@
             // 
             panel1.Controls.Add(pictureBox2);
             panel1.Dock = DockStyle.Right;
-            panel1.Location = new Point(500, 0);
+            panel1.Location = new Point(400, 0);
+            panel1.Margin = new Padding(2, 2, 2, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(300, 524);
+            panel1.Size = new Size(240, 419);
             panel1.TabIndex = 0;
             // 
             // pictureBox2
@@ -57,8 +58,9 @@
             pictureBox2.Dock = DockStyle.Fill;
             pictureBox2.Image = Properties.Resources._4d8cee174988773_64ac37b2b5ea1;
             pictureBox2.Location = new Point(0, 0);
+            pictureBox2.Margin = new Padding(2, 2, 2, 2);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(300, 524);
+            pictureBox2.Size = new Size(240, 419);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 0;
             pictureBox2.TabStop = false;
@@ -75,8 +77,9 @@
             panel2.Controls.Add(label1);
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(0, 0);
+            panel2.Margin = new Padding(2, 2, 2, 2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(500, 524);
+            panel2.Size = new Size(400, 419);
             panel2.TabIndex = 1;
             // 
             // label4
@@ -84,9 +87,10 @@
             label4.AutoSize = true;
             label4.Cursor = Cursors.Hand;
             label4.Font = new Font("Century Gothic", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(12, 9);
+            label4.Location = new Point(10, 7);
+            label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
-            label4.Size = new Size(24, 23);
+            label4.Size = new Size(21, 19);
             label4.TabIndex = 8;
             label4.Text = "X";
             label4.Click += label4_Click;
@@ -103,9 +107,10 @@
             botonRedondo1.FlatStyle = FlatStyle.Flat;
             botonRedondo1.Font = new Font("Segoe UI Black", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             botonRedondo1.ForeColor = Color.Black;
-            botonRedondo1.Location = new Point(31, 409);
+            botonRedondo1.Location = new Point(25, 327);
+            botonRedondo1.Margin = new Padding(2, 2, 2, 2);
             botonRedondo1.Name = "botonRedondo1";
-            botonRedondo1.Size = new Size(168, 60);
+            botonRedondo1.Size = new Size(134, 48);
             botonRedondo1.TabIndex = 7;
             botonRedondo1.Text = "Entrar";
             botonRedondo1.TextColor = Color.Black;
@@ -115,26 +120,30 @@
             // passwordtxt
             // 
             passwordtxt.Cursor = Cursors.IBeam;
-            passwordtxt.Location = new Point(31, 307);
+            passwordtxt.Location = new Point(25, 246);
+            passwordtxt.Margin = new Padding(2, 2, 2, 2);
             passwordtxt.Name = "passwordtxt";
-            passwordtxt.Size = new Size(436, 31);
+            passwordtxt.Size = new Size(350, 27);
             passwordtxt.TabIndex = 6;
             // 
             // userBox
             // 
             userBox.Cursor = Cursors.IBeam;
-            userBox.Location = new Point(31, 178);
+            userBox.Location = new Point(25, 142);
+            userBox.Margin = new Padding(2, 2, 2, 2);
             userBox.Name = "userBox";
-            userBox.Size = new Size(436, 31);
+            userBox.Size = new Size(350, 27);
             userBox.TabIndex = 5;
+            userBox.TextChanged += userBox_TextChanged;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Century Gothic", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(31, 272);
+            label3.Location = new Point(25, 218);
+            label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
-            label3.Size = new Size(143, 23);
+            label3.Size = new Size(123, 19);
             label3.TabIndex = 4;
             label3.Text = "CONTRASEÑA";
             // 
@@ -142,9 +151,10 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Century Gothic", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(31, 142);
+            label2.Location = new Point(25, 114);
+            label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(96, 23);
+            label2.Size = new Size(80, 19);
             label2.TabIndex = 3;
             label2.Text = "USUARIO";
             // 
@@ -152,20 +162,22 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Century Gothic", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(31, 53);
+            label1.Location = new Point(25, 42);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(256, 38);
+            label1.Size = new Size(216, 32);
             label1.TabIndex = 2;
             label1.Text = "INICIAR SESIÓN";
             // 
             // Inicio
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 524);
+            ClientSize = new Size(640, 419);
             Controls.Add(panel2);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(2, 2, 2, 2);
             Name = "Inicio";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Inicio";
