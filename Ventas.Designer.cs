@@ -30,6 +30,7 @@
         {
             panel1 = new Panel();
             panel3 = new Panel();
+            iconButton6 = new FontAwesome.Sharp.IconButton();
             iconButton5 = new FontAwesome.Sharp.IconButton();
             iconButton4 = new FontAwesome.Sharp.IconButton();
             iconButton3 = new FontAwesome.Sharp.IconButton();
@@ -48,7 +49,6 @@
             label2 = new Label();
             label1 = new Label();
             textBox1 = new TextBox();
-            iconButton6 = new FontAwesome.Sharp.IconButton();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
             panel2.SuspendLayout();
@@ -82,6 +82,23 @@
             panel3.Name = "panel3";
             panel3.Size = new Size(176, 376);
             panel3.TabIndex = 1;
+            // 
+            // iconButton6
+            // 
+            iconButton6.Cursor = Cursors.Hand;
+            iconButton6.Dock = DockStyle.Top;
+            iconButton6.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            iconButton6.IconChar = FontAwesome.Sharp.IconChar.PiggyBank;
+            iconButton6.IconColor = Color.Black;
+            iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconButton6.IconSize = 30;
+            iconButton6.Location = new Point(0, 207);
+            iconButton6.Name = "iconButton6";
+            iconButton6.Size = new Size(176, 69);
+            iconButton6.TabIndex = 8;
+            iconButton6.Text = "Finanzas";
+            iconButton6.TextImageRelation = TextImageRelation.ImageBeforeText;
+            iconButton6.UseVisualStyleBackColor = true;
             // 
             // iconButton5
             // 
@@ -297,6 +314,7 @@
             botonRedondo1.Text = "Ventas";
             botonRedondo1.TextColor = Color.Black;
             botonRedondo1.UseVisualStyleBackColor = false;
+            botonRedondo1.Click += btnComprar_Click;
             // 
             // numericUpDown1
             // 
@@ -331,23 +349,6 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(146, 27);
             textBox1.TabIndex = 7;
-            // 
-            // iconButton6
-            // 
-            iconButton6.Cursor = Cursors.Hand;
-            iconButton6.Dock = DockStyle.Top;
-            iconButton6.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            iconButton6.IconChar = FontAwesome.Sharp.IconChar.PiggyBank;
-            iconButton6.IconColor = Color.Black;
-            iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton6.IconSize = 30;
-            iconButton6.Location = new Point(0, 207);
-            iconButton6.Name = "iconButton6";
-            iconButton6.Size = new Size(176, 69);
-            iconButton6.TabIndex = 8;
-            iconButton6.Text = "Finanzas";
-            iconButton6.TextImageRelation = TextImageRelation.ImageBeforeText;
-            iconButton6.UseVisualStyleBackColor = true;
             // 
             // Ventas
             // 

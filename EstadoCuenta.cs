@@ -15,8 +15,20 @@ namespace proyecto_sistemas
         public EstadoCuenta()
         {
             InitializeComponent();
+            Estado_cuenta_Load(null, null);
+        }
+        decimal mostrarDinero = Financiero.dinero;
+        private void Estado_cuenta_Load(object sender, EventArgs e)
+        {
+            textBox1.Text = mostrarDinero.ToString("F2");
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            decimal deposito = decimal.Parse(textBox2.Text);
+            Financiero.dinero += deposito;
+            textBox1.Text = Financiero.dinero.ToString("F2");
+        }
         private void iconButton2_Click(object sender, EventArgs e)
         {
             this.Hide();

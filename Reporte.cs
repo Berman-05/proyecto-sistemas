@@ -1,4 +1,5 @@
-﻿using System;
+﻿using modulo_inventario;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,8 +16,45 @@ namespace proyecto_sistemas
         public Reporte()
         {
             InitializeComponent();
+            Estado_cuenta_Load(null,null);
+            Cargaringresos();
+            CargarEgresos();
         }
+        public static decimal ganancias = 0;
+        private void Estado_cuenta_Load(object sender, EventArgs e)
+        {
+            textBox1.Text = Ventas.neto.ToString("F2");
+            textBox2.Text = ganancias.ToString("F2");
+        }
+        public static List<Productos> ingresos = new List<Productos>();
+        private void CargarEgresos()
+        {
+            // Crear una lista anónima con los atributos deseados
+            var productosFiltrados = Productos.ComprasRealizadas
+                .Select(p => new
+                {
+                    p.Nombre,
+                    p.Cantidad,
+                    p.Precio
+                }).ToList();
 
+            // Asignar la lista filtrada al DataGridView
+            dataGridView2.DataSource = productosFiltrados;
+        }
+        private void Cargaringresos()
+        {
+            // Crear una lista anónima con los atributos deseados
+            var productosFiltrados = Reporte.ingresos
+                .Select(p => new
+                {
+                    p.Nombre,
+                    p.Cantidad,
+                    p.PrecioVenta
+                }).ToList();
+
+            // Asignar la lista filtrada al DataGridView
+            dataGridView1.DataSource = productosFiltrados;
+        }
         private void iconButton2_Click(object sender, EventArgs e)
         {
             this.Hide();
