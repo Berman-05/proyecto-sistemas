@@ -60,27 +60,9 @@ namespace proyecto_sistemas
         }
         private void buttonGenerarFactura_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.Rows.Count == 0)
-            {
-                MessageBox.Show("No hay productos en la factura.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            using (SaveFileDialog saveFileDialog = new SaveFileDialog())
-            {
-                saveFileDialog.Filter = "PDF Files|*.pdf";
-                saveFileDialog.Title = "Guardar Factura";
-                saveFileDialog.FileName = "Factura.pdf";
-
-                if (saveFileDialog.ShowDialog() == DialogResult.OK)
-                {
-                    GenerarFacturaPDF(saveFileDialog.FileName);
-                    MessageBox.Show("Factura generada exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            }
         }
         public static decimal transaccion = 0;
-        public static decimal neto = 0;                                   
+        public static decimal neto = 0;
         private void button1_Click(object sender, EventArgs e)
         {
             int codigo = int.Parse(textBox1.Text);
@@ -97,7 +79,7 @@ namespace proyecto_sistemas
                 Reporte.ingresos.Add(buscar);
                 neto += buscar.PrecioVenta * int.Parse(numericUpDown1.Text);
                 MessageBox.Show("añadido al pedido.");
-                buttonGenerarFactura_Click(null,null);
+                buttonGenerarFactura_Click(null, null);
             }
             else { MessageBox.Show("Sin existencias."); }
         }
@@ -188,7 +170,7 @@ namespace proyecto_sistemas
             dataGridView1.Columns.Add("Precio", "Precio");
             dataGridView1.Columns.Add("Total", "Total");
         }
-      
+
         private void iconButton2_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -251,6 +233,28 @@ namespace proyecto_sistemas
             this.Hide();
             Inicio nuevoFormulario = new Inicio();
             nuevoFormulario.Show();
+        }
+
+        private void botonRedondo2_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.Rows.Count == 0)
+            {
+                MessageBox.Show("No hay productos en la factura.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            using (SaveFileDialog saveFileDialog = new SaveFileDialog())
+            {
+                saveFileDialog.Filter = "PDF Files|*.pdf";
+                saveFileDialog.Title = "Guardar Factura";
+                saveFileDialog.FileName = "Factura.pdf";
+
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    GenerarFacturaPDF(saveFileDialog.FileName);
+                    MessageBox.Show("Factura generada exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
         }
     }
 }

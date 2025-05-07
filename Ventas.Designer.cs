@@ -49,6 +49,7 @@
             label2 = new Label();
             label1 = new Label();
             textBox1 = new TextBox();
+            botonRedondo2 = new BotonRedondo();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
             panel2.SuspendLayout();
@@ -274,6 +275,7 @@
             // 
             // panel5
             // 
+            panel5.Controls.Add(botonRedondo2);
             panel5.Controls.Add(dataGridView1);
             panel5.Controls.Add(botonRedondo1);
             panel5.Controls.Add(numericUpDown1);
@@ -306,10 +308,11 @@
             botonRedondo1.BorderSize = 0;
             botonRedondo1.FlatAppearance.BorderSize = 0;
             botonRedondo1.FlatStyle = FlatStyle.Flat;
+            botonRedondo1.Font = new Font("Century Gothic", 9F);
             botonRedondo1.ForeColor = Color.Black;
-            botonRedondo1.Location = new Point(488, 104);
+            botonRedondo1.Location = new Point(442, 104);
             botonRedondo1.Name = "botonRedondo1";
-            botonRedondo1.Size = new Size(134, 40);
+            botonRedondo1.Size = new Size(155, 40);
             botonRedondo1.TabIndex = 11;
             botonRedondo1.Text = "Ventas";
             botonRedondo1.TextColor = Color.Black;
@@ -318,16 +321,17 @@
             // 
             // numericUpDown1
             // 
-            numericUpDown1.Location = new Point(477, 50);
+            numericUpDown1.Font = new Font("Century Gothic", 9F);
+            numericUpDown1.Location = new Point(115, 117);
             numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(146, 27);
+            numericUpDown1.Size = new Size(236, 26);
             numericUpDown1.TabIndex = 10;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(393, 54);
+            label2.Location = new Point(31, 119);
             label2.Name = "label2";
             label2.Size = new Size(78, 20);
             label2.TabIndex = 9;
@@ -345,10 +349,31 @@
             // 
             // textBox1
             // 
+            textBox1.Font = new Font("Century Gothic", 9F);
             textBox1.Location = new Point(205, 50);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(146, 27);
+            textBox1.Size = new Size(146, 26);
             textBox1.TabIndex = 7;
+            // 
+            // botonRedondo2
+            // 
+            botonRedondo2.BackColor = Color.Gold;
+            botonRedondo2.BackgroundColor = Color.Gold;
+            botonRedondo2.BorderColor = Color.Cyan;
+            botonRedondo2.BorderRadius = 20;
+            botonRedondo2.BorderSize = 0;
+            botonRedondo2.FlatAppearance.BorderSize = 0;
+            botonRedondo2.FlatStyle = FlatStyle.Flat;
+            botonRedondo2.Font = new Font("Century Gothic", 9F);
+            botonRedondo2.ForeColor = Color.Black;
+            botonRedondo2.Location = new Point(442, 44);
+            botonRedondo2.Name = "botonRedondo2";
+            botonRedondo2.Size = new Size(155, 40);
+            botonRedondo2.TabIndex = 13;
+            botonRedondo2.Text = "Agregar producto";
+            botonRedondo2.TextColor = Color.Black;
+            botonRedondo2.UseVisualStyleBackColor = false;
+            botonRedondo2.Click += botonRedondo2_Click;
             // 
             // Ventas
             // 
@@ -400,5 +425,6 @@
         private DataGridView dataGridView1;
         private Label label3;
         private FontAwesome.Sharp.IconButton iconButton6;
+        private BotonRedondo botonRedondo2;
     }
 }
