@@ -71,7 +71,7 @@ namespace proyecto_sistemas
             {
                 buscar.Cantidad -= int.Parse(numericUpDown1.Text);
                 CargarProductos();
-                dataGridView1.Rows.Add(textBox1.Text, buscar.Nombre, buscar.Proveedor, numericUpDown1.Text, buscar.PrecioVenta); // Agregar fila
+                dataGridView1.Rows.Add(textBox1.Text, buscar.Nombre, buscar.Proveedor, numericUpDown1.Text, buscar.PrecioVenta,textBox3.Text,textBox2.Text); // Agregar fila
                 textBox1.Clear();
                 transaccion += buscar.PrecioVenta * int.Parse(numericUpDown1.Text);
                 Financiero.dinero += transaccion - ((transaccion / 1.12m * 0.17m));
@@ -79,7 +79,7 @@ namespace proyecto_sistemas
                 Reporte.ingresos.Add(buscar);
                 neto += buscar.PrecioVenta * int.Parse(numericUpDown1.Text);
                 MessageBox.Show("añadido al pedido.");
-                buttonGenerarFactura_Click(null, null);
+               
             }
             else { MessageBox.Show("Sin existencias."); }
         }
@@ -126,8 +126,8 @@ namespace proyecto_sistemas
                 doc.Add(new Paragraph("Factura de Venta", tituloFont));
                 doc.Add(new Paragraph("\nFecha: " + DateTime.Now.ToString("dd/MM/yyyy HH:mm") + "\n\n", normalFont));
 
-                string nitCliente = dataGridView1.Rows[0].Cells[5].Value?.ToString() ?? "N/A";
-                string nombreCliente = dataGridView1.Rows[0].Cells[6].Value?.ToString() ?? "N/A";
+                string nitCliente = textBox3.Text.ToString() ?? "N/A";
+                string nombreCliente = textBox2.Text.ToString() ?? "N/A";
 
                 doc.Add(new Paragraph("Datos del Cliente:", tituloFont));
                 doc.Add(new Paragraph("NIT: " + nitCliente, normalFont));

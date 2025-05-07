@@ -43,6 +43,10 @@
             IBtnExit = new FontAwesome.Sharp.IconButton();
             iconButton1 = new FontAwesome.Sharp.IconButton();
             panel5 = new Panel();
+            label5 = new Label();
+            textBox3 = new TextBox();
+            label4 = new Label();
+            textBox2 = new TextBox();
             botonRedondo2 = new BotonRedondo();
             dataGridView1 = new DataGridView();
             botonRedondo1 = new BotonRedondo();
@@ -50,10 +54,6 @@
             label2 = new Label();
             label1 = new Label();
             textBox1 = new TextBox();
-            label4 = new Label();
-            textBox2 = new TextBox();
-            label5 = new Label();
-            textBox3 = new TextBox();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
             panel2.SuspendLayout();
@@ -298,6 +298,42 @@
             panel5.TabIndex = 3;
             panel5.Paint += panel5_Paint;
             // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.Location = new Point(31, 138);
+            label5.Name = "label5";
+            label5.Size = new Size(30, 20);
+            label5.TabIndex = 17;
+            label5.Text = "NIT";
+            // 
+            // textBox3
+            // 
+            textBox3.Font = new Font("Century Gothic", 9F);
+            textBox3.Location = new Point(67, 138);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(284, 26);
+            textBox3.TabIndex = 16;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.Location = new Point(31, 97);
+            label4.Name = "label4";
+            label4.Size = new Size(68, 20);
+            label4.TabIndex = 15;
+            label4.Text = "Nombre";
+            // 
+            // textBox2
+            // 
+            textBox2.Font = new Font("Century Gothic", 9F);
+            textBox2.Location = new Point(105, 97);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(246, 26);
+            textBox2.TabIndex = 14;
+            // 
             // botonRedondo2
             // 
             botonRedondo2.BackColor = Color.Gold;
@@ -316,7 +352,7 @@
             botonRedondo2.Text = "Agregar producto";
             botonRedondo2.TextColor = Color.Black;
             botonRedondo2.UseVisualStyleBackColor = false;
-            botonRedondo2.Click += botonRedondo2_Click;
+            botonRedondo2.Click += button1_Click;
             // 
             // dataGridView1
             // 
@@ -345,7 +381,7 @@
             botonRedondo1.Text = "Ventas";
             botonRedondo1.TextColor = Color.Black;
             botonRedondo1.UseVisualStyleBackColor = false;
-            botonRedondo1.Click += button1_Click;
+            botonRedondo1.Click += botonRedondo2_Click;
             // 
             // numericUpDown1
             // 
@@ -382,42 +418,6 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(146, 26);
             textBox1.TabIndex = 7;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(31, 97);
-            label4.Name = "label4";
-            label4.Size = new Size(68, 20);
-            label4.TabIndex = 15;
-            label4.Text = "Nombre";
-            // 
-            // textBox2
-            // 
-            textBox2.Font = new Font("Century Gothic", 9F);
-            textBox2.Location = new Point(105, 97);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(246, 26);
-            textBox2.TabIndex = 14;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(31, 138);
-            label5.Name = "label5";
-            label5.Size = new Size(30, 20);
-            label5.TabIndex = 17;
-            label5.Text = "NIT";
-            // 
-            // textBox3
-            // 
-            textBox3.Font = new Font("Century Gothic", 9F);
-            textBox3.Location = new Point(67, 138);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(284, 26);
-            textBox3.TabIndex = 16;
             // 
             // Ventas
             // 
