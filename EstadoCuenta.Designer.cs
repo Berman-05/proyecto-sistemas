@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             panel3 = new Panel();
+            botonRedondo1 = new BotonRedondo();
+            textBox2 = new TextBox();
+            label2 = new Label();
+            textBox1 = new TextBox();
+            label4 = new Label();
             panel2 = new Panel();
             label1 = new Label();
             IBtnMin = new FontAwesome.Sharp.IconButton();
@@ -43,11 +48,6 @@
             iconButton2 = new FontAwesome.Sharp.IconButton();
             panel4 = new Panel();
             pictureBox1 = new PictureBox();
-            textBox1 = new TextBox();
-            label4 = new Label();
-            textBox2 = new TextBox();
-            label2 = new Label();
-            botonRedondo1 = new BotonRedondo();
             panel3.SuspendLayout();
             panel2.SuspendLayout();
             panel1.SuspendLayout();
@@ -70,6 +70,62 @@
             panel3.Name = "panel3";
             panel3.Size = new Size(667, 451);
             panel3.TabIndex = 7;
+            // 
+            // botonRedondo1
+            // 
+            botonRedondo1.BackColor = Color.Gold;
+            botonRedondo1.BackgroundColor = Color.Gold;
+            botonRedondo1.BorderColor = Color.Cyan;
+            botonRedondo1.BorderRadius = 20;
+            botonRedondo1.BorderSize = 0;
+            botonRedondo1.FlatAppearance.BorderSize = 0;
+            botonRedondo1.FlatStyle = FlatStyle.Flat;
+            botonRedondo1.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            botonRedondo1.ForeColor = Color.Black;
+            botonRedondo1.Location = new Point(49, 345);
+            botonRedondo1.Name = "botonRedondo1";
+            botonRedondo1.Size = new Size(573, 69);
+            botonRedondo1.TabIndex = 10;
+            botonRedondo1.Text = "Depositar";
+            botonRedondo1.TextColor = Color.Black;
+            botonRedondo1.UseVisualStyleBackColor = false;
+            botonRedondo1.Click += button1_Click;
+            // 
+            // textBox2
+            // 
+            textBox2.Font = new Font("Century Gothic", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox2.Location = new Point(49, 256);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(573, 41);
+            textBox2.TabIndex = 9;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Century Gothic", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(40, 194);
+            label2.Name = "label2";
+            label2.Size = new Size(288, 40);
+            label2.TabIndex = 8;
+            label2.Text = "Depositar dinero";
+            // 
+            // textBox1
+            // 
+            textBox1.Font = new Font("Century Gothic", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox1.Location = new Point(49, 97);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(573, 41);
+            textBox1.TabIndex = 7;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Century Gothic", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.Location = new Point(40, 35);
+            label4.Name = "label4";
+            label4.Size = new Size(342, 40);
+            label4.TabIndex = 6;
+            label4.Text = "Dinero en la cuenta";
             // 
             // panel2
             // 
@@ -286,61 +342,6 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
-            // 
-            // textBox1
-            // 
-            textBox1.Font = new Font("Century Gothic", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(49, 97);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(573, 41);
-            textBox1.TabIndex = 7;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Century Gothic", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(40, 35);
-            label4.Name = "label4";
-            label4.Size = new Size(342, 40);
-            label4.TabIndex = 6;
-            label4.Text = "Dinero en la cuenta";
-            // 
-            // textBox2
-            // 
-            textBox2.Font = new Font("Century Gothic", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox2.Location = new Point(49, 256);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(573, 41);
-            textBox2.TabIndex = 9;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Century Gothic", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(40, 194);
-            label2.Name = "label2";
-            label2.Size = new Size(288, 40);
-            label2.TabIndex = 8;
-            label2.Text = "Depositar dinero";
-            // 
-            // botonRedondo1
-            // 
-            botonRedondo1.BackColor = Color.Gold;
-            botonRedondo1.BackgroundColor = Color.Gold;
-            botonRedondo1.BorderColor = Color.Cyan;
-            botonRedondo1.BorderRadius = 20;
-            botonRedondo1.BorderSize = 0;
-            botonRedondo1.FlatAppearance.BorderSize = 0;
-            botonRedondo1.FlatStyle = FlatStyle.Flat;
-            botonRedondo1.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            botonRedondo1.ForeColor = Color.Black;
-            botonRedondo1.Location = new Point(49, 345);
-            botonRedondo1.Name = "botonRedondo1";
-            botonRedondo1.Size = new Size(573, 69);
-            botonRedondo1.TabIndex = 10;
-            botonRedondo1.Text = "Depositar";
-            botonRedondo1.TextColor = Color.Black;
-            botonRedondo1.UseVisualStyleBackColor = false;
             // 
             // EstadoCuenta
             // 

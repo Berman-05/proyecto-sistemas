@@ -30,7 +30,7 @@ namespace proyecto_sistemas
             int cantidadComprada = (int)numericUpDown1.Value; // NumericUpDown para la cantidad
             decimal precio = decimal.Parse(textBox2.Text); // Precio del producto
             decimal precioVenta = precio + (precio * 0.5m); // Precio de venta del producto
-            int codigo = int.Parse(txtCodigo.Text); // Código del producto
+            int codigo = int.Parse(textBox3.Text); // Código del producto
 
             // Verificar si ya existe el producto en el inventario
             Productos productoExistente = existencias.FirstOrDefault(p => p.Nombre == nombreProducto);

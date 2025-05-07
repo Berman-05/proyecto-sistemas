@@ -43,23 +43,23 @@
             IBtnExit = new FontAwesome.Sharp.IconButton();
             iconButton1 = new FontAwesome.Sharp.IconButton();
             panel3 = new Panel();
+            dataGridView1 = new DataGridView();
+            botonRedondo4 = new BotonRedondo();
+            botonRedondo3 = new BotonRedondo();
+            botonRedondo2 = new BotonRedondo();
+            botonRedondo1 = new BotonRedondo();
+            textBox6 = new TextBox();
+            textBox5 = new TextBox();
+            textBox4 = new TextBox();
+            textBox3 = new TextBox();
+            textBox2 = new TextBox();
+            label7 = new Label();
+            label6 = new Label();
+            label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
             label2 = new Label();
             textBox1 = new TextBox();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            label6 = new Label();
-            label7 = new Label();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
-            textBox6 = new TextBox();
-            botonRedondo1 = new BotonRedondo();
-            botonRedondo2 = new BotonRedondo();
-            botonRedondo3 = new BotonRedondo();
-            botonRedondo4 = new BotonRedondo();
-            dataGridView1 = new DataGridView();
             panel1.SuspendLayout();
             panel5.SuspendLayout();
             panel4.SuspendLayout();
@@ -312,164 +312,14 @@
             panel3.TabIndex = 2;
             panel3.Paint += panel3_Paint;
             // 
-            // label2
+            // dataGridView1
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(49, 24);
-            label2.Name = "label2";
-            label2.Size = new Size(68, 20);
-            label2.TabIndex = 10;
-            label2.Text = "Nombre";
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(124, 141);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(176, 27);
-            textBox1.TabIndex = 9;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(49, 84);
-            label3.Name = "label3";
-            label3.Size = new Size(69, 20);
-            label3.TabIndex = 11;
-            label3.Text = "Apellido";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(23, 144);
-            label4.Name = "label4";
-            label4.Size = new Size(95, 20);
-            label4.TabIndex = 12;
-            label4.Text = "Contraseña";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(387, 28);
-            label5.Name = "label5";
-            label5.Size = new Size(71, 20);
-            label5.TabIndex = 13;
-            label5.Text = "Teléfono";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(401, 84);
-            label6.Name = "label6";
-            label6.Size = new Size(57, 20);
-            label6.TabIndex = 14;
-            label6.Text = "Salario";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label7.Location = new Point(345, 144);
-            label7.Name = "label7";
-            label7.Size = new Size(116, 20);
-            label7.TabIndex = 15;
-            label7.Text = "Bonificaciones";
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(124, 81);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(176, 27);
-            textBox2.TabIndex = 16;
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(124, 21);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(176, 27);
-            textBox3.TabIndex = 17;
-            // 
-            // textBox4
-            // 
-            textBox4.Location = new Point(464, 141);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(176, 27);
-            textBox4.TabIndex = 18;
-            // 
-            // textBox5
-            // 
-            textBox5.Location = new Point(464, 81);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(176, 27);
-            textBox5.TabIndex = 19;
-            // 
-            // textBox6
-            // 
-            textBox6.Location = new Point(464, 21);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(176, 27);
-            textBox6.TabIndex = 20;
-            // 
-            // botonRedondo1
-            // 
-            botonRedondo1.BackColor = Color.Gold;
-            botonRedondo1.BackgroundColor = Color.Gold;
-            botonRedondo1.BorderColor = Color.Cyan;
-            botonRedondo1.BorderRadius = 20;
-            botonRedondo1.BorderSize = 0;
-            botonRedondo1.FlatAppearance.BorderSize = 0;
-            botonRedondo1.FlatStyle = FlatStyle.Flat;
-            botonRedondo1.Font = new Font("Century Gothic", 7.8F, FontStyle.Bold);
-            botonRedondo1.ForeColor = Color.Black;
-            botonRedondo1.Location = new Point(23, 196);
-            botonRedondo1.Name = "botonRedondo1";
-            botonRedondo1.Size = new Size(134, 40);
-            botonRedondo1.TabIndex = 21;
-            botonRedondo1.Text = "Agregar";
-            botonRedondo1.TextColor = Color.Black;
-            botonRedondo1.UseVisualStyleBackColor = false;
-            // 
-            // botonRedondo2
-            // 
-            botonRedondo2.BackColor = Color.Gold;
-            botonRedondo2.BackgroundColor = Color.Gold;
-            botonRedondo2.BorderColor = Color.Cyan;
-            botonRedondo2.BorderRadius = 20;
-            botonRedondo2.BorderSize = 0;
-            botonRedondo2.FlatAppearance.BorderSize = 0;
-            botonRedondo2.FlatStyle = FlatStyle.Flat;
-            botonRedondo2.Font = new Font("Century Gothic", 7.8F, FontStyle.Bold);
-            botonRedondo2.ForeColor = Color.Black;
-            botonRedondo2.Location = new Point(186, 196);
-            botonRedondo2.Name = "botonRedondo2";
-            botonRedondo2.Size = new Size(134, 40);
-            botonRedondo2.TabIndex = 22;
-            botonRedondo2.Text = "Editar";
-            botonRedondo2.TextColor = Color.Black;
-            botonRedondo2.UseVisualStyleBackColor = false;
-            // 
-            // botonRedondo3
-            // 
-            botonRedondo3.BackColor = Color.Gold;
-            botonRedondo3.BackgroundColor = Color.Gold;
-            botonRedondo3.BorderColor = Color.Cyan;
-            botonRedondo3.BorderRadius = 20;
-            botonRedondo3.BorderSize = 0;
-            botonRedondo3.FlatAppearance.BorderSize = 0;
-            botonRedondo3.FlatStyle = FlatStyle.Flat;
-            botonRedondo3.Font = new Font("Century Gothic", 7.8F, FontStyle.Bold);
-            botonRedondo3.ForeColor = Color.Black;
-            botonRedondo3.Location = new Point(506, 196);
-            botonRedondo3.Name = "botonRedondo3";
-            botonRedondo3.Size = new Size(134, 40);
-            botonRedondo3.TabIndex = 23;
-            botonRedondo3.Text = "Cambiar salario";
-            botonRedondo3.TextColor = Color.Black;
-            botonRedondo3.UseVisualStyleBackColor = false;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(23, 251);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.Size = new Size(617, 188);
+            dataGridView1.TabIndex = 25;
             // 
             // botonRedondo4
             // 
@@ -489,15 +339,169 @@
             botonRedondo4.Text = "Cambiar estado";
             botonRedondo4.TextColor = Color.Black;
             botonRedondo4.UseVisualStyleBackColor = false;
+            botonRedondo4.Click += btnToggleEstado_Click;
             // 
-            // dataGridView1
+            // botonRedondo3
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(23, 251);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(617, 188);
-            dataGridView1.TabIndex = 25;
+            botonRedondo3.BackColor = Color.Gold;
+            botonRedondo3.BackgroundColor = Color.Gold;
+            botonRedondo3.BorderColor = Color.Cyan;
+            botonRedondo3.BorderRadius = 20;
+            botonRedondo3.BorderSize = 0;
+            botonRedondo3.FlatAppearance.BorderSize = 0;
+            botonRedondo3.FlatStyle = FlatStyle.Flat;
+            botonRedondo3.Font = new Font("Century Gothic", 7.8F, FontStyle.Bold);
+            botonRedondo3.ForeColor = Color.Black;
+            botonRedondo3.Location = new Point(506, 196);
+            botonRedondo3.Name = "botonRedondo3";
+            botonRedondo3.Size = new Size(134, 40);
+            botonRedondo3.TabIndex = 23;
+            botonRedondo3.Text = "Cambiar salario";
+            botonRedondo3.TextColor = Color.Black;
+            botonRedondo3.UseVisualStyleBackColor = false;
+            botonRedondo3.Click += btnCambiarSalario_Click;
+            // 
+            // botonRedondo2
+            // 
+            botonRedondo2.BackColor = Color.Gold;
+            botonRedondo2.BackgroundColor = Color.Gold;
+            botonRedondo2.BorderColor = Color.Cyan;
+            botonRedondo2.BorderRadius = 20;
+            botonRedondo2.BorderSize = 0;
+            botonRedondo2.FlatAppearance.BorderSize = 0;
+            botonRedondo2.FlatStyle = FlatStyle.Flat;
+            botonRedondo2.Font = new Font("Century Gothic", 7.8F, FontStyle.Bold);
+            botonRedondo2.ForeColor = Color.Black;
+            botonRedondo2.Location = new Point(186, 196);
+            botonRedondo2.Name = "botonRedondo2";
+            botonRedondo2.Size = new Size(134, 40);
+            botonRedondo2.TabIndex = 22;
+            botonRedondo2.Text = "Editar";
+            botonRedondo2.TextColor = Color.Black;
+            botonRedondo2.UseVisualStyleBackColor = false;
+            botonRedondo2.Click += btnEditarEmpleado_Click;
+            // 
+            // botonRedondo1
+            // 
+            botonRedondo1.BackColor = Color.Gold;
+            botonRedondo1.BackgroundColor = Color.Gold;
+            botonRedondo1.BorderColor = Color.Cyan;
+            botonRedondo1.BorderRadius = 20;
+            botonRedondo1.BorderSize = 0;
+            botonRedondo1.FlatAppearance.BorderSize = 0;
+            botonRedondo1.FlatStyle = FlatStyle.Flat;
+            botonRedondo1.Font = new Font("Century Gothic", 7.8F, FontStyle.Bold);
+            botonRedondo1.ForeColor = Color.Black;
+            botonRedondo1.Location = new Point(23, 196);
+            botonRedondo1.Name = "botonRedondo1";
+            botonRedondo1.Size = new Size(134, 40);
+            botonRedondo1.TabIndex = 21;
+            botonRedondo1.Text = "Agregar";
+            botonRedondo1.TextColor = Color.Black;
+            botonRedondo1.UseVisualStyleBackColor = false;
+            botonRedondo1.Click += btnAgregar_Click;
+            // 
+            // textBox6
+            // 
+            textBox6.Location = new Point(464, 21);
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(176, 27);
+            textBox6.TabIndex = 20;
+            // 
+            // textBox5
+            // 
+            textBox5.Location = new Point(464, 81);
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(176, 27);
+            textBox5.TabIndex = 19;
+            // 
+            // textBox4
+            // 
+            textBox4.Location = new Point(464, 141);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(176, 27);
+            textBox4.TabIndex = 18;
+            // 
+            // textBox3
+            // 
+            textBox3.Location = new Point(124, 21);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(176, 27);
+            textBox3.TabIndex = 17;
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(124, 81);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(176, 27);
+            textBox2.TabIndex = 16;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label7.Location = new Point(345, 144);
+            label7.Name = "label7";
+            label7.Size = new Size(116, 20);
+            label7.TabIndex = 15;
+            label7.Text = "Bonificaciones";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.Location = new Point(401, 84);
+            label6.Name = "label6";
+            label6.Size = new Size(57, 20);
+            label6.TabIndex = 14;
+            label6.Text = "Salario";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.Location = new Point(387, 28);
+            label5.Name = "label5";
+            label5.Size = new Size(71, 20);
+            label5.TabIndex = 13;
+            label5.Text = "Teléfono";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.Location = new Point(23, 144);
+            label4.Name = "label4";
+            label4.Size = new Size(95, 20);
+            label4.TabIndex = 12;
+            label4.Text = "Contraseña";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Location = new Point(49, 84);
+            label3.Name = "label3";
+            label3.Size = new Size(69, 20);
+            label3.TabIndex = 11;
+            label3.Text = "Apellido";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Location = new Point(49, 24);
+            label2.Name = "label2";
+            label2.Size = new Size(68, 20);
+            label2.TabIndex = 10;
+            label2.Text = "Nombre";
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(124, 141);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(176, 27);
+            textBox1.TabIndex = 9;
             // 
             // RecursosHumanos
             // 

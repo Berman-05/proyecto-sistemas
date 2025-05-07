@@ -13,6 +13,7 @@ using Font = iTextSharp.text.Font;
 using System.IO;
 using modulo_inventario;
 using System.Transactions;
+using Microsoft.VisualBasic;
 
 namespace proyecto_sistemas
 {
@@ -26,12 +27,14 @@ namespace proyecto_sistemas
 
         private void Ventas_Load(object sender, EventArgs e)
         {
-            dataGridView1.ColumnCount = 5;
+            dataGridView1.ColumnCount = 7;
             dataGridView1.Columns[0].Name = "Codigo";
             dataGridView1.Columns[1].Name = "Nombre";
-            dataGridView1.Columns[2].Name = "Proveedor";    
+            dataGridView1.Columns[2].Name = "Proveedor";
             dataGridView1.Columns[3].Name = "Cantidad";
             dataGridView1.Columns[4].Name = "Precio";
+            dataGridView1.Columns[5].Name = "NIT";
+            dataGridView1.Columns[6].Name = "NombreCliente";
         }
         private void btnComprar_Click(object sender, EventArgs e)
         {
@@ -80,20 +83,21 @@ namespace proyecto_sistemas
         public static decimal neto = 0;                                   
         private void button1_Click(object sender, EventArgs e)
         {
-            int codigo = int.Parse(txtCodigo.Text);
+            int codigo = int.Parse(textBox1.Text);
             Productos buscar = Compras.existencias.Find(p => p.Codigo == codigo);
             if (buscar != null)
             {
                 buscar.Cantidad -= int.Parse(numericUpDown1.Text);
                 CargarProductos();
-                dataGridView1.Rows.Add(numericUpDown1.Text, buscar.Nombre, buscar.Proveedor, numericUpDown1.Text, buscar.PrecioVenta); // Agregar fila
-                txtCodigo.Clear();
+                dataGridView1.Rows.Add(textBox1.Text, buscar.Nombre, buscar.Proveedor, numericUpDown1.Text, buscar.PrecioVenta); // Agregar fila
+                textBox1.Clear();
                 transaccion += buscar.PrecioVenta * int.Parse(numericUpDown1.Text);
                 Financiero.dinero += transaccion - ((transaccion / 1.12m * 0.17m));
                 Reporte.ganancias += transaccion - ((transaccion / 1.12m * 0.17m));
                 Reporte.ingresos.Add(buscar);
                 neto += buscar.PrecioVenta * int.Parse(numericUpDown1.Text);
                 MessageBox.Show("añadido al pedido.");
+                buttonGenerarFactura_Click(null,null);
             }
             else { MessageBox.Show("Sin existencias."); }
         }
@@ -113,7 +117,7 @@ namespace proyecto_sistemas
                 // Agregar logo desde archivo
                 try
                 {
-                    string logoPath = "C:\\Users\\monte\\Source\\Repos\\modulo-inventario\\logo.png"; // Ruta absoluta
+                    string logoPath = "C:\\Users\\Bernardo Velásquez\\Source\\Repos\\pry-sistemas-final\\Resources\\LogoMainPolloRey"; // Ruta absoluta
                     iTextSharp.text.Image logo = iTextSharp.text.Image.GetInstance(logoPath);
                     logo.ScaleToFit(100f, 100f);
                     logo.Alignment = Element.ALIGN_CENTER;

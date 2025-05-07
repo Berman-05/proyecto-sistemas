@@ -1,4 +1,5 @@
-﻿using System;
+﻿using modulo_inventario;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,46 +14,47 @@ namespace proyecto_sistemas
 {
     public partial class RecursosHumanos : Form
     {
+        private List<Empleado> empleados = new List<Empleado>();
         public RecursosHumanos()
         {
             InitializeComponent();
         }
         private void ConfigurarDataGridView()
         {
-            dgvEmpleados.AutoGenerateColumns = false;
-            dgvEmpleados.Columns.Clear();
+            dataGridView1.AutoGenerateColumns = false;
+            dataGridView1.Columns.Clear();
 
-            dgvEmpleados.Columns.Add(new DataGridViewTextBoxColumn()
+            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn()
             {
                 DataPropertyName = "Nombre",
                 HeaderText = "Nombre"
             });
-            dgvEmpleados.Columns.Add(new DataGridViewTextBoxColumn()
+            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn()
             {
                 DataPropertyName = "Apellido",
                 HeaderText = "Apellido"
             });
-            dgvEmpleados.Columns.Add(new DataGridViewTextBoxColumn()
+            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn()
             {
                 DataPropertyName = "Telefono",
                 HeaderText = "Teléfono"
             });
-            dgvEmpleados.Columns.Add(new DataGridViewTextBoxColumn()
+            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn()
             {
                 DataPropertyName = "SalarioBase",
                 HeaderText = "Salario Base"
             });
-            dgvEmpleados.Columns.Add(new DataGridViewTextBoxColumn()
+            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn()
             {
                 DataPropertyName = "Bonificacion",
                 HeaderText = "Bonificación"
             });
-            dgvEmpleados.Columns.Add(new DataGridViewTextBoxColumn()
+            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn()
             {
                 DataPropertyName = "SalarioFinal",
                 HeaderText = "Salario Final"
             });
-            dgvEmpleados.Columns.Add(new DataGridViewTextBoxColumn()
+            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn()
             {
                 DataPropertyName = "Estado",
                 HeaderText = "Estado"
@@ -62,44 +64,44 @@ namespace proyecto_sistemas
         // Actualiza el DataGridView con la lista de empleados
         private void MostrarEmpleados()
         {
-            dgvEmpleados.DataSource = null;
-            dgvEmpleados.DataSource = empleados;
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = empleados;
         }
 
         // Limpia los TextBox después de agregar o editar
         private void LimpiarCampos()
         {
-            txtNombre.Clear();
-            txtApellido.Clear();
-            txtTelefono.Clear();
-            txtContrasena.Clear();
-            txtSalarioBase.Clear();
-            txtBonificacion.Clear();
+            textBox3.Clear();
+            textBox2.Clear();
+            textBox6.Clear();
+            textBox1.Clear();
+            textBox5.Clear();
+            textBox4.Clear();
         }
 
 
         // Botón: Editar Empleado (datos personales)
         private void btnEditarEmpleado_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtNombre.Text) ||
-            string.IsNullOrWhiteSpace(txtApellido.Text) ||
-            string.IsNullOrWhiteSpace(txtTelefono.Text) ||
-            txtTelefono.Text.Length != 8)  // Verificar que el teléfono tenga 8 dígitos
+            if (string.IsNullOrWhiteSpace(textBox3.Text) ||
+            string.IsNullOrWhiteSpace(textBox2.Text) ||
+            string.IsNullOrWhiteSpace(textBox6.Text) ||
+            textBox6.Text.Length != 8)  // Verificar que el teléfono tenga 8 dígitos
             {
                 MessageBox.Show("Por favor, complete todos los campos requeridos (Nombre, Apellido, Teléfono de 8 dígitos).", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            if (dgvEmpleados.SelectedRows.Count > 0)
+            if (dataGridView1.SelectedRows.Count > 0)
             {
-                int index = dgvEmpleados.SelectedRows[0].Index;
+                int index = dataGridView1.SelectedRows[0].Index;
                 Empleado empleadoSeleccionado = empleados[index];
 
                 // Actualizar datos personales
-                empleadoSeleccionado.Nombre = txtNombre.Text;
-                empleadoSeleccionado.Apellido = txtApellido.Text;
-                empleadoSeleccionado.Telefono = txtTelefono.Text;
+                empleadoSeleccionado.Nombre = textBox3.Text;
+                empleadoSeleccionado.Apellido = textBox2.Text;
+                empleadoSeleccionado.Telefono = textBox6.Text;
                 // Actualizamos la contraseña y se cifra nuevamente
-                empleadoSeleccionado.Contraseña = Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes(txtContrasena.Text));
+                empleadoSeleccionado.Contraseña = Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes(textBox1.Text));
 
                 MostrarEmpleados();
                 LimpiarCampos();
@@ -115,9 +117,9 @@ namespace proyecto_sistemas
         // Botón: Alternar Estado (Activo/Desactivado)
         private void btnToggleEstado_Click(object sender, EventArgs e)
         {
-            if (dgvEmpleados.SelectedRows.Count > 0)
+            if (dataGridView1.SelectedRows.Count > 0)
             {
-                int index = dgvEmpleados.SelectedRows[0].Index;
+                int index = dataGridView1.SelectedRows[0].Index;
                 Empleado empleadoSeleccionado = empleados[index];
 
                 // Alternar el estado del empleado
@@ -137,13 +139,13 @@ namespace proyecto_sistemas
             {
                 Empleado empleadoSeleccionado = empleados[e.RowIndex];
 
-                txtNombre.Text = empleadoSeleccionado.Nombre;
-                txtApellido.Text = empleadoSeleccionado.Apellido;
-                txtTelefono.Text = empleadoSeleccionado.Telefono;
+                textBox3.Text = empleadoSeleccionado.Nombre;
+                textBox2.Text = empleadoSeleccionado.Apellido;
+                textBox6.Text = empleadoSeleccionado.Telefono;
                 // Por seguridad, se deja vacío el campo de contraseña al cargar
-                txtContrasena.Text = "";
-                txtSalarioBase.Text = empleadoSeleccionado.SalarioBase.ToString();
-                txtBonificacion.Text = empleadoSeleccionado.Bonificacion.ToString();
+                textBox1.Text = "";
+                textBox5.Text = empleadoSeleccionado.SalarioBase.ToString();
+                textBox4.Text = empleadoSeleccionado.Bonificacion.ToString();
             }
         }
         private bool ValidarTelefono(string telefono)
@@ -157,15 +159,15 @@ namespace proyecto_sistemas
         }
         private void btnCambiarSalario_Click(object sender, EventArgs e)
         {
-            if (dgvEmpleados.SelectedRows.Count > 0)
+            if (dataGridView1.SelectedRows.Count > 0)
             {
-                int index = dgvEmpleados.SelectedRows[0].Index;
+                int index = dataGridView1.SelectedRows[0].Index;
                 Empleado empleadoSeleccionado = empleados[index];
 
                 try
                 {
-                    decimal nuevoSalarioBase = Convert.ToDecimal(txtSalarioBase.Text);
-                    decimal nuevaBonificacion = string.IsNullOrWhiteSpace(txtBonificacion.Text) ? 0 : Convert.ToDecimal(txtBonificacion.Text);
+                    decimal nuevoSalarioBase = Convert.ToDecimal(textBox5.Text);
+                    decimal nuevaBonificacion = string.IsNullOrWhiteSpace(textBox4.Text) ? 0 : Convert.ToDecimal(textBox4.Text);
 
                     // Actualizar datos salariales
                     empleadoSeleccionado.ActualizarSalario(nuevoSalarioBase, nuevaBonificacion);
@@ -188,12 +190,12 @@ namespace proyecto_sistemas
         {
             try
             {
-                string nombre = txtNombre.Text;
-                string apellido = txtApellido.Text;
-                string telefono = txtTelefono.Text;
-                string contraseña = txtContrasena.Text;
-                decimal salarioBase = Convert.ToDecimal(txtSalarioBase.Text);
-                decimal bonificacion = string.IsNullOrWhiteSpace(txtBonificacion.Text) ? 0 : Convert.ToDecimal(txtBonificacion.Text);
+                string nombre = textBox3.Text;
+                string apellido = textBox2.Text;
+                string telefono = textBox6.Text;
+                string contraseña = textBox1.Text;
+                decimal salarioBase = Convert.ToDecimal(textBox5.Text);
+                decimal bonificacion = string.IsNullOrWhiteSpace(textBox4.Text) ? 0 : Convert.ToDecimal(textBox4.Text);
 
                 // Validar el número de teléfono
                 if (!ValidarTelefono(telefono))

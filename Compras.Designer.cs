@@ -30,6 +30,7 @@
         {
             panel1 = new Panel();
             panel3 = new Panel();
+            iconButton6 = new FontAwesome.Sharp.IconButton();
             iconButton5 = new FontAwesome.Sharp.IconButton();
             iconButton4 = new FontAwesome.Sharp.IconButton();
             iconButton3 = new FontAwesome.Sharp.IconButton();
@@ -42,6 +43,8 @@
             IBtnExit = new FontAwesome.Sharp.IconButton();
             iconButton1 = new FontAwesome.Sharp.IconButton();
             panel5 = new Panel();
+            textBox3 = new TextBox();
+            label6 = new Label();
             dataGridView1 = new DataGridView();
             botonRedondo1 = new BotonRedondo();
             comboBox1 = new ComboBox();
@@ -52,7 +55,6 @@
             label2 = new Label();
             label1 = new Label();
             textBox1 = new TextBox();
-            iconButton6 = new FontAwesome.Sharp.IconButton();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
             panel2.SuspendLayout();
@@ -86,6 +88,23 @@
             panel3.Name = "panel3";
             panel3.Size = new Size(176, 376);
             panel3.TabIndex = 1;
+            // 
+            // iconButton6
+            // 
+            iconButton6.Cursor = Cursors.Hand;
+            iconButton6.Dock = DockStyle.Top;
+            iconButton6.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            iconButton6.IconChar = FontAwesome.Sharp.IconChar.PiggyBank;
+            iconButton6.IconColor = Color.Black;
+            iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconButton6.IconSize = 30;
+            iconButton6.Location = new Point(0, 207);
+            iconButton6.Name = "iconButton6";
+            iconButton6.Size = new Size(176, 69);
+            iconButton6.TabIndex = 8;
+            iconButton6.Text = "Finanzas";
+            iconButton6.TextImageRelation = TextImageRelation.ImageBeforeText;
+            iconButton6.UseVisualStyleBackColor = true;
             // 
             // iconButton5
             // 
@@ -261,6 +280,8 @@
             // 
             // panel5
             // 
+            panel5.Controls.Add(textBox3);
+            panel5.Controls.Add(label6);
             panel5.Controls.Add(dataGridView1);
             panel5.Controls.Add(botonRedondo1);
             panel5.Controls.Add(comboBox1);
@@ -278,6 +299,22 @@
             panel5.Size = new Size(667, 451);
             panel5.TabIndex = 3;
             panel5.Paint += panel5_Paint;
+            // 
+            // textBox3
+            // 
+            textBox3.Location = new Point(193, 170);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(125, 27);
+            textBox3.TabIndex = 11;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(137, 173);
+            label6.Name = "label6";
+            label6.Size = new Size(58, 20);
+            label6.TabIndex = 10;
+            label6.Text = "Código";
             // 
             // dataGridView1
             // 
@@ -305,10 +342,12 @@
             botonRedondo1.Text = "Comprar";
             botonRedondo1.TextColor = Color.Black;
             botonRedondo1.UseVisualStyleBackColor = false;
+            botonRedondo1.Click += btnComprar_Click;
             // 
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Pollo rey" });
             comboBox1.Location = new Point(469, 48);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(174, 28);
@@ -375,23 +414,6 @@
             textBox1.Size = new Size(146, 27);
             textBox1.TabIndex = 0;
             // 
-            // iconButton6
-            // 
-            iconButton6.Cursor = Cursors.Hand;
-            iconButton6.Dock = DockStyle.Top;
-            iconButton6.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            iconButton6.IconChar = FontAwesome.Sharp.IconChar.PiggyBank;
-            iconButton6.IconColor = Color.Black;
-            iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton6.IconSize = 30;
-            iconButton6.Location = new Point(0, 207);
-            iconButton6.Name = "iconButton6";
-            iconButton6.Size = new Size(176, 69);
-            iconButton6.TabIndex = 8;
-            iconButton6.Text = "Finanzas";
-            iconButton6.TextImageRelation = TextImageRelation.ImageBeforeText;
-            iconButton6.UseVisualStyleBackColor = true;
-            // 
             // Compras
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -446,5 +468,7 @@
         private DataGridView dataGridView1;
         private Label label5;
         private FontAwesome.Sharp.IconButton iconButton6;
+        private TextBox textBox3;
+        private Label label6;
     }
 }

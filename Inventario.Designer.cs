@@ -30,6 +30,7 @@
         {
             panel1 = new Panel();
             panel5 = new Panel();
+            iconButton6 = new FontAwesome.Sharp.IconButton();
             iconButton5 = new FontAwesome.Sharp.IconButton();
             iconButton4 = new FontAwesome.Sharp.IconButton();
             iconButton3 = new FontAwesome.Sharp.IconButton();
@@ -44,7 +45,6 @@
             dataGridView1 = new DataGridView();
             txtBuscar = new TextBox();
             IBtnBuscarUsuario = new FontAwesome.Sharp.IconButton();
-            iconButton6 = new FontAwesome.Sharp.IconButton();
             panel1.SuspendLayout();
             panel5.SuspendLayout();
             panel4.SuspendLayout();
@@ -77,6 +77,23 @@
             panel5.Name = "panel5";
             panel5.Size = new Size(176, 376);
             panel5.TabIndex = 1;
+            // 
+            // iconButton6
+            // 
+            iconButton6.Cursor = Cursors.Hand;
+            iconButton6.Dock = DockStyle.Top;
+            iconButton6.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            iconButton6.IconChar = FontAwesome.Sharp.IconChar.PiggyBank;
+            iconButton6.IconColor = Color.Black;
+            iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconButton6.IconSize = 30;
+            iconButton6.Location = new Point(0, 207);
+            iconButton6.Name = "iconButton6";
+            iconButton6.Size = new Size(176, 69);
+            iconButton6.TabIndex = 5;
+            iconButton6.Text = "Finanzas";
+            iconButton6.TextImageRelation = TextImageRelation.ImageBeforeText;
+            iconButton6.UseVisualStyleBackColor = true;
             // 
             // iconButton5
             // 
@@ -255,7 +272,7 @@
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(194, 138);
-            dataGridView1.Margin = new Padding(2, 2, 2, 2);
+            dataGridView1.Margin = new Padding(2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(634, 343);
@@ -264,7 +281,7 @@
             // txtBuscar
             // 
             txtBuscar.Location = new Point(194, 86);
-            txtBuscar.Margin = new Padding(2, 2, 2, 2);
+            txtBuscar.Margin = new Padding(2);
             txtBuscar.Name = "txtBuscar";
             txtBuscar.PlaceholderText = "Buscar...";
             txtBuscar.Size = new Size(593, 27);
@@ -286,23 +303,7 @@
             IBtnBuscarUsuario.Size = new Size(47, 23);
             IBtnBuscarUsuario.TabIndex = 20;
             IBtnBuscarUsuario.UseVisualStyleBackColor = false;
-            // 
-            // iconButton6
-            // 
-            iconButton6.Cursor = Cursors.Hand;
-            iconButton6.Dock = DockStyle.Top;
-            iconButton6.Font = new Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            iconButton6.IconChar = FontAwesome.Sharp.IconChar.PiggyBank;
-            iconButton6.IconColor = Color.Black;
-            iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton6.IconSize = 30;
-            iconButton6.Location = new Point(0, 207);
-            iconButton6.Name = "iconButton6";
-            iconButton6.Size = new Size(176, 69);
-            iconButton6.TabIndex = 5;
-            iconButton6.Text = "Finanzas";
-            iconButton6.TextImageRelation = TextImageRelation.ImageBeforeText;
-            iconButton6.UseVisualStyleBackColor = true;
+            IBtnBuscarUsuario.Click += txtBusqueda_TextChanged;
             // 
             // Inventario
             // 
@@ -315,7 +316,7 @@
             Controls.Add(panel2);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "Inventario";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Inventario";

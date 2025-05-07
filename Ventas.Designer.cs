@@ -314,7 +314,7 @@
             botonRedondo1.Text = "Ventas";
             botonRedondo1.TextColor = Color.Black;
             botonRedondo1.UseVisualStyleBackColor = false;
-            botonRedondo1.Click += btnComprar_Click;
+            botonRedondo1.Click += button1_Click;
             // 
             // numericUpDown1
             // 
@@ -339,9 +339,9 @@
             label1.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.Location = new Point(31, 54);
             label1.Name = "label1";
-            label1.Size = new Size(168, 20);
+            label1.Size = new Size(164, 20);
             label1.TabIndex = 8;
-            label1.Text = "Nombre del producto";
+            label1.Text = "Código del producto";
             // 
             // textBox1
             // 
